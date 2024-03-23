@@ -10,6 +10,7 @@ btn.addEventListener("click", function() {
         hidden.className = "not-hidden"
     }
     else{
+        hidden.className = "hidden"
         fetch(`https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${input.value}`)
         .then((response => response.json()))
         .then((datas => {

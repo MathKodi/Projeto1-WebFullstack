@@ -1,23 +1,91 @@
 body,
 h1,
 h2,
-h3,
 p,
-ul {
-    padding: 0px;
+ul,
+li,
+a {
     margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* superfinfo */
+
+.superinfo-bg {
+    background: #2C362D;
+    color: white;
+}
+
+.superinfo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.superinfo p {
+    margin: 0 10px 10px 10px;
+    color: white;
+}
+
+/*Header*/
+.menu-bg {
+    background-color: #5D7A44;
 }
 
 .menu {
-    background-color: aliceblue;
     padding: 20px 0;
-}
-
-.menu-container {
+    color: #F4F1DE;
     max-width: 960px;
     margin: 0 auto;
-    align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu h2 {
+    margin-top: 10px;
+}
+
+/*pesquisa*/
+.search-bg {
+    background-color: #BFBFBF;
+}
+
+.search {
+
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #input {
@@ -38,19 +106,30 @@ ul {
     text-transform: uppercase;
     font-size: 1.5em;
     width: 140px px;
-    padding: 8px 0;
+    padding: 10px 10px;
     color: #fff;
     border: none;
+}
+
+.search p {
+    color: red;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding-right: 50px;
+    padding-top: 15px;
 }
 
 .hidden {
     display: none;
 }
 
-.not-hidden{
+.not-hidden {
     display: flex;
 }
 
+
+
+/*conteudo*/
 .content {
     background-color: #f1f1f1;
     padding: 20px 0;
