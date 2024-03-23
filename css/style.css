@@ -127,15 +127,43 @@ img {
     display: flex;
 }
 
-
-
 /*conteudo*/
 .content {
-    background-color: #f1f1f1;
-    padding: 20px 0;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.conteudo {
+    background-color: #b4bdb6;
 }
 
 .content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 960px;
+    align-content: flex-end;
+}
+
+#list li {
+    border: #222222;
+    border-width: 2px;
+
+    flex: 1 1 630px;
+    padding-top: 20px;
+    padding-right: 30px;
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #4e4e4e;
+}
+
+#list img {
+    flex: 1 1 300px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
