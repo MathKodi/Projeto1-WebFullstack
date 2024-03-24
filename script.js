@@ -20,14 +20,14 @@ btn.addEventListener("click", function() {
             if(result !== undefined){
                 if(result.common_locations){
                     for(i = 0; i < result.common_locations.length; i++){
-                        newLI.innerHTML = `Lugar comuns para se encontrar: ${result.common_locations}, <br>` ;
+                        newLI.innerHTML = `Lugar comuns para se encontrar: ${result.common_locations} <br>` ;
                     }
                 }
                 if(result.description){
-                    newLI.innerHTML = newLI.innerHTML + `Descrição: ${result.description}, <br>` ;
+                    newLI.innerHTML = newLI.innerHTML + `Descrição: ${result.description} <br>` ;
                 }
                 if(result.drops){
-                    newLI.innerHTML = newLI.innerHTML + ` Drops: ${result.drops}, <br>` ;
+                    newLI.innerHTML = newLI.innerHTML + ` Drops: ${result.drops} <br>` ;
                 }
                 if(result.name !== undefined){
                     newLI.innerHTML = newLI.innerHTML + ` Nome: ${result.name} <br>`

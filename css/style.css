@@ -150,20 +150,18 @@ img {
 }
 
 #list li {
-    border: #222222;
-    border-width: 2px;
-
+    border: 2px outset #50505077;
     flex: 1 1 630px;
     padding-top: 20px;
-    padding-right: 30px;
+    padding-left: 20px;
     font-size: 1.25em;
     line-height: 1.4;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: 1em;
     color: #4e4e4e;
 }
 
 #list img {
-    flex: 1 1 300px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding: 20px 20px 40px 20px;
 }
