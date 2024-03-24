@@ -9,6 +9,10 @@ btn.addEventListener("click", function() {
         hidden.innerHTML = "Se você não digitar nada me complica né paizão"
         hidden.className = "not-hidden"
     }
+    if(input.value > 389 || input.value < 1){
+        hidden.innerHTML = "Digite um número entre 1 e 389 amigão"
+        hidden.className = "not-hidden"
+    }
     else{
         hidden.className = "hidden"
         fetch(`https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${input.value}`)
@@ -26,7 +30,7 @@ btn.addEventListener("click", function() {
                 if(result.description){
                     newLI.innerHTML = newLI.innerHTML + `Descrição: ${result.description} <br>` ;
                 }
-                if(result.drops){
+                if(result.drops.length > 0){
                     newLI.innerHTML = newLI.innerHTML + ` Drops: ${result.drops} <br>` ;
                 }
                 if(result.name !== undefined){
