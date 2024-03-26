@@ -2,17 +2,14 @@ const btn = document.querySelector('#btn');
 const input = document.querySelector('#input');
 const list = document.querySelector("#list")
 const hidden = document.querySelector(".hidden")
+var indice = 0
+var array = []
 
 btn.addEventListener("click", function() {   
-
     if(input.value.replace(/\s/g, '') === ""){
         hidden.innerHTML = "Se você não digitar nada me complica né paizão"
         hidden.className = "not-hidden"
     }
-    /*if(input.value > 389 || input.value < 1){
-        hidden.innerHTML = "Digite um número entre 1 e 389 amigão"
-        hidden.className = "not-hidden"
-    }*/
     else{
         hidden.className = "hidden"
         fetch(`https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${input.value}`)
@@ -27,8 +24,16 @@ btn.addEventListener("click", function() {
         .then((datas => {
             console.log(datas.data)
             const result = datas.data
+            var flag = true
+            array.forEach((nome) => {
+                if(nome == result.name){
+                    flag = false
+                }
+            })
+            array[indice] = result.name
             const newLI = document.createElement('li');
-            if(result !== undefined){
+            console.log(array) 
+            if(result !== undefined && flag !== false){
                 if(result.common_locations){
                     newLI.innerHTML = `Lugar comuns para se encontrar: ${result.common_locations} <br>` ;                    
                 }
@@ -48,9 +53,14 @@ btn.addEventListener("click", function() {
                     image.src = result.image
                     list.appendChild(image)
                 }
+                indice++;
+            } else if(flag === false){
+                hidden.innerHTML = "Essa entidade já foi pesquisada! Da um visu aí mano."
+                hidden.className = "not-hidden"
             }
         }))
         .catch((error) => {
+            console.log(error)
             hidden.innerHTML = "Digite um número entre 1 e 389 ou um nome de uma entidade existente"
             hidden.className = "not-hidden"
         })
