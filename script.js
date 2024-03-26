@@ -35,6 +35,7 @@ btn.addEventListener("click", function() {
                 if(result.description){
                     newLI.innerHTML = newLI.innerHTML + `Descrição: ${result.description} <br>` ;
                 }
+                if(result.drops !== null && result.drops !== undefined && result.drops.length > 0){
                 if(result.drops !== undefined &&  result.drops !== null && result.drops.length > 0){
                     newLI.innerHTML = newLI.innerHTML + ` Drops: ${result.drops} <br>` ;
                 }
